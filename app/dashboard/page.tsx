@@ -1,3 +1,5 @@
+// This is our dashboard page where we show important information and statistics
+// We use 'use client' because we need interactive features
 'use client'
 
 import React from 'react'
@@ -20,11 +22,14 @@ import {
 export default function DashboardPage() {
   return (
     <div className="flex-1 space-y-4 p-8 pt-6">
+      {/* Dashboard title */}
       <div className="flex items-center justify-between space-y-2">
         <h2 className="text-3xl font-bold tracking-tight text-green-800">Dashboard Overview</h2>
       </div>
 
+      {/* Quick stats cards - Shows important numbers at a glance */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        {/* Total Products Card */}
         <Card className="border-green-100">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Products</CardTitle>
@@ -35,6 +40,8 @@ export default function DashboardPage() {
             <p className="text-xs text-muted-foreground">+12 from last month</p>
           </CardContent>
         </Card>
+
+        {/* Total Orders Card */}
         <Card className="border-green-100">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Orders</CardTitle>

@@ -1,3 +1,5 @@
+// This is the main homepage of our agricultural management system
+// We use 'use client' to tell Next.js this is a client-side component
 'use client'
 
 import React from 'react'
@@ -9,14 +11,17 @@ import { Card, CardContent } from "@/components/ui/card"
 export default function HomePage() {
   return (
     <div className="flex-1">
-      {/* Hero Section */}
+      {/* Hero Section - This is the main banner at the top of the page */}
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col space-y-4">
+          {/* This badge shows our main focus */}
           <span className="bg-green-100 text-green-600 px-4 py-1 rounded-full inline-block w-fit">
             Agricultural Excellence
           </span>
 
+          {/* Main content area with text and image */}
           <div className="grid lg:grid-cols-2 gap-8 items-center">
+            {/* Left side - Text content */}
             <div className="space-y-6">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl lg:text-6xl text-green-800">
                 Streamline Your Agricultural Management
@@ -26,6 +31,7 @@ export default function HomePage() {
                 DURFAM provides a comprehensive solution for managing your agricultural products, inventory, and orders with ease and efficiency.
               </p>
               
+              {/* Navigation buttons */}
               <div className="flex gap-4">
                 <Link href="/dashboard">
                   <Button className="bg-green-600 hover:bg-green-700">
@@ -40,6 +46,7 @@ export default function HomePage() {
               </div>
             </div>
 
+            {/* Right side - Main image */}
             <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden">
               <Image
                 src="/image/agric1.webp"
