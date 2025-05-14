@@ -59,10 +59,10 @@ export default function ProductsPage() {
           <Tabs defaultValue="all" className="w-full" value={activeTab} onValueChange={setActiveTab}>
             <TabsList>
               <TabsTrigger value="all">All Products</TabsTrigger>
-              <TabsTrigger value="seeds">Seeds</TabsTrigger>
-              <TabsTrigger value="fertilizer">Fertilizers</TabsTrigger>
+              <TabsTrigger value="livestock">Livestock</TabsTrigger>
               <TabsTrigger value="equipment">Equipment</TabsTrigger>
               <TabsTrigger value="tools">Tools</TabsTrigger>
+              <TabsTrigger value="produce">Produce</TabsTrigger>
             </TabsList>
           </Tabs>
 

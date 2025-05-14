@@ -14,10 +14,10 @@ import { toast } from "@/components/ui/use-toast"
 import { updateProduct, productCategories, ProductData } from '@/lib/products'
 
 const applicationMethods = [
-  { value: 'foliar', label: 'Foliar Spray' },
-  { value: 'soil', label: 'Soil Application' },
-  { value: 'drip', label: 'Drip Irrigation' },
-  { value: 'broadcast', label: 'Broadcasting' }
+  { value: 'indoor', label: 'Indoor Housing' },
+  { value: 'outdoor', label: 'Outdoor Grazing' },
+  { value: 'mixed', label: 'Mixed System' },
+  { value: 'intensive', label: 'Intensive System' }
 ]
 
 interface EditProductFormProps {
@@ -69,6 +69,17 @@ export default function EditProductForm({ initialData }: EditProductFormProps) {
     setLoading(true)
 
     try {
+      // Validate required fields
+      if (!formData.product_name || !formData.product_type || !formData.price) {
+        toast({
+          title: "Validation Error",
+          description: "Please fill in all required fields",
+          variant: "destructive"
+        })
+        return
+      }
+
+      // Format the data
       const formattedData = {
         ...formData,
         price: Number(parseFloat(formData.price).toFixed(2)),
@@ -77,22 +88,33 @@ export default function EditProductForm({ initialData }: EditProductFormProps) {
         reorder_level: Number(formData.reorder_level)
       }
 
+      console.log('Sending update with data:', formattedData)
+
       const { data, error } = await updateProduct(initialData.id!, formattedData)
 
-      if (error) throw error
+      if (error) {
+        console.error('Update error:', error)
+        throw error
+      }
+
+      console.log('Update successful:', data)
 
       toast({
         title: "Success",
         description: "Product updated successfully",
       })
 
-      router.push('/products')
-      router.refresh()
-    } catch (error) {
+      // Wait a moment before redirecting
+      setTimeout(() => {
+        router.push('/products')
+        router.refresh()
+      }, 1000)
+
+    } catch (error: any) {
       console.error('Error updating product:', error)
       toast({
         title: "Error",
-        description: "Failed to update product. Please try again.",
+        description: error.message || "Failed to update product. Please try again.",
         variant: "destructive"
       })
     } finally {

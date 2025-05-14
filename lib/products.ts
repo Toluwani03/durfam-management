@@ -143,8 +143,8 @@ export async function deleteProduct(id: string) {
 }
 
 export const productCategories = [
-  { value: 'seeds', label: 'Seeds' },
-  { value: 'fertilizer', label: 'Fertilizer' },
+  { value: 'livestock', label: 'Livestock' },
   { value: 'equipment', label: 'Equipment' },
-  { value: 'tools', label: 'Tools' }
+  { value: 'tools', label: 'Tools' },
+  { value: 'produce', label: 'Produce' }
 ] 

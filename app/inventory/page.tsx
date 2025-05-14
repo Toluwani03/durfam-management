@@ -86,34 +86,34 @@ export default function InventoryPage() {
             </TableHeader>
             <TableBody>
               <TableRow>
-                <TableCell className="font-medium">Organic Fertilizer</TableCell>
-                <TableCell>Fertilizers</TableCell>
-                <TableCell>250</TableCell>
-                <TableCell>₦15,000</TableCell>
-                <TableCell>₦3,750,000</TableCell>
+                <TableCell className="font-medium">Dairy Cow</TableCell>
+                <TableCell>Livestock</TableCell>
+                <TableCell>5</TableCell>
+                <TableCell>₦450,000</TableCell>
+                <TableCell>₦2,250,000</TableCell>
                 <TableCell><Badge className="bg-green-500">In Stock</Badge></TableCell>
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium">Premium Seeds</TableCell>
-                <TableCell>Seeds</TableCell>
+                <TableCell className="font-medium">Fresh Tomatoes</TableCell>
+                <TableCell>Produce</TableCell>
                 <TableCell>1000</TableCell>
-                <TableCell>₦5,000</TableCell>
-                <TableCell>₦5,000,000</TableCell>
+                <TableCell>₦500</TableCell>
+                <TableCell>₦500,000</TableCell>
                 <TableCell><Badge className="bg-green-500">In Stock</Badge></TableCell>
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium">Pesticide Pro</TableCell>
-                <TableCell>Pesticides</TableCell>
-                <TableCell>50</TableCell>
-                <TableCell>₦8,500</TableCell>
-                <TableCell>₦425,000</TableCell>
+                <TableCell className="font-medium">Tractor</TableCell>
+                <TableCell>Equipment</TableCell>
+                <TableCell>2</TableCell>
+                <TableCell>₦8,500,000</TableCell>
+                <TableCell>₦17,000,000</TableCell>
                 <TableCell><Badge variant="outline">Low Stock</Badge></TableCell>
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium">Growth Enhancer</TableCell>
-                <TableCell>Supplements</TableCell>
+                <TableCell className="font-medium">Hand Tools Set</TableCell>
+                <TableCell>Tools</TableCell>
                 <TableCell>0</TableCell>
-                <TableCell>₦12,000</TableCell>
+                <TableCell>₦45,000</TableCell>
                 <TableCell>₦0</TableCell>
                 <TableCell><Badge variant="destructive">Out of Stock</Badge></TableCell>
               </TableRow>

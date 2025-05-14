@@ -14,10 +14,10 @@ import { toast } from "@/components/ui/use-toast"
 import { createProduct, productCategories } from '@/lib/products'
 
 const applicationMethods = [
-  { value: 'foliar', label: 'Foliar Spray' },
-  { value: 'soil', label: 'Soil Application' },
-  { value: 'drip', label: 'Drip Irrigation' },
-  { value: 'broadcast', label: 'Broadcasting' }
+  { value: 'indoor', label: 'Indoor Housing' },
+  { value: 'outdoor', label: 'Outdoor Grazing' },
+  { value: 'mixed', label: 'Mixed System' },
+  { value: 'intensive', label: 'Intensive System' }
 ]
 
 export default function AddProductPage() {
